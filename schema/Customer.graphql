@@ -1,0 +1,26 @@
+type StripeCustomer {
+  # Id of the customer in stripe
+  id: ID!
+  # if the user has a credit card associated
+  isActive: Boolean
+  # The cards of the customer
+  cards: [Card]
+  # The default card of the customer
+  card: Card
+}
+
+type Card {
+  id: ID!
+  # Name of the brand
+  brand: String
+  # Country of emission of the card
+  country: String
+  # Expiration month of the card
+  expMonth: Int
+  # Expiration year of the card
+  expYear: Int
+  # Type of card funding
+  funding: String
+  # Last 4 digits of the card number
+  last4: String
+}

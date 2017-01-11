@@ -1,5 +1,11 @@
-// Write your package code here!
+import './checkNpm'
+import {loadSchema} from 'graphql-loader'
+import typeDefs from './schema'
+import resolvers from './resolvers'
+import stripe from './stripe'
 
-// Variables exported by this module can be imported by other packages and
-// applications. See stripe-graphql-tests.js for an example of importing.
-export const name = 'stripe-graphql';
+loadSchema({typeDefs, resolvers})
+
+export {
+  stripe
+}

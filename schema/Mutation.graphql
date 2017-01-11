@@ -1,0 +1,6 @@
+type Mutation {
+  # Creates a new stripe customer with a new card
+  stripeCreateCustomer (source: String!): StripeCustomer
+  # Replaces the default card with a new one
+  stripeUpdateCustomerCard (source: String!): StripeCustomer
+}
