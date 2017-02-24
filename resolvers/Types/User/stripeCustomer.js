@@ -8,5 +8,7 @@ export default async function ({_id}, params, context) {
   if (!user.services.stripe) return
   const customer = await stripe.customers.retrieve(user.services.stripe.customerId)
 
+  if (customer.deleted) return null
+
   return customer
 }

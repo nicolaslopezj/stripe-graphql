@@ -23,4 +23,6 @@ type Card {
   funding: String
   # Last 4 digits of the card number
   last4: String
+  # The name of the card owner
+  name: String
 }
