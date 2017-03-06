@@ -15,7 +15,7 @@ Package.describe({
 Package.onUse(function (api) {
   api.versionsFrom('1.4.2.3')
   api.use('ecmascript')
-  api.use('orionsoft:graphql-compiler')
+  api.use('orionsoft:graphql-compiler@0.0.2')
   api.use('tmeasday:check-npm-versions@0.3.1')
   api.mainModule('stripe-graphql.js')
 })
@@ -23,6 +23,6 @@ Package.onUse(function (api) {
 Package.onTest(function (api) {
   api.use('ecmascript')
   api.use('tinytest')
-  api.use('stripe-graphql')
+  api.use('orionsoft:stripe-graphql')
   api.mainModule('stripe-graphql-tests.js')
 })
