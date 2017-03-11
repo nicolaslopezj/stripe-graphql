@@ -2,7 +2,7 @@
 
 Package.describe({
   name: 'orionsoft:stripe-graphql',
-  version: '0.0.4',
+  version: '0.0.5',
   // Brief, one-line summary of the package.
   summary: 'Stripe for Apollo',
   // URL to the Git repository containing the source code for this package.
@@ -17,7 +17,7 @@ Package.onUse(function (api) {
   api.use('ecmascript')
   api.use('orionsoft:graphql-compiler@0.0.2')
   api.use('tmeasday:check-npm-versions@0.3.1')
-  api.mainModule('stripe-graphql.js')
+  api.mainModule('stripe-graphql.js', 'server')
 })
 
 Package.onTest(function (api) {
